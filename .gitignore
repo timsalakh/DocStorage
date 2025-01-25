@@ -1,0 +1,11 @@
+*.log
+*.env
+.env.*
+venv/
+.vscode/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
