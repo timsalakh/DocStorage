@@ -1,8 +1,7 @@
 from fastapi import FastAPI
 from fastapi.concurrency import asynccontextmanager
 from fastapi.middleware.gzip import GZipMiddleware
-
-app = FastAPI()
+from app.routes.users import router as user_router
 
 
 @asynccontextmanager
@@ -17,3 +16,5 @@ app.add_middleware(
     minimum_size=1000,
     compresslevel=5,
 )
+
+app.include_router(user_router)
